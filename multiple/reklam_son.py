@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
+import os
 
-data=pd.read_csv("reklam.csv")
+data_path = os.path.join(os.path.dirname(__file__), 'reklam.csv')
+data=pd.read_csv(data_path)
 data.head()
 x=data.iloc[:,1:-1].values
 y=data.iloc[:,-1].values
